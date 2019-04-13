@@ -15,3 +15,9 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+- task: Docker@2
+  inputs:
+    containerRegistry: '2f62fe4e-745b-4d90-8a74-ec20001c4c66'
+    repository: 'parliamentbusiness'
+    command: 'buildAndPush'
