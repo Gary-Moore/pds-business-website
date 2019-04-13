@@ -13,4 +13,11 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.5.4" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <ProjectReference Include="..\ParliamentBusinessWebsite.Domain\ParliamentBusinessWebsite.Domain.csproj" />
+    <ProjectReference Include="..\ParliamentBusinessWebsite.Services\ParliamentBusinessWebsite.Services.csproj" />
+    <ProjectReference Include="..\ParliamentBusinessWebsite.Tests\ParliamentBusinessWebsite.Tests.csproj" />
+  </ItemGroup>
+
 </Project>
