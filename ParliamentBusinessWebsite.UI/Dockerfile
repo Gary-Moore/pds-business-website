@@ -7,8 +7,8 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2-nanoserver-1803 AS build
 WORKDIR /src
-COPY ["ParliamentBusinessWebsite.UI/ParliamentBusinessWebsite.UI.csproj", "ParliamentBusinessWebsite.UI/"]
-RUN dotnet restore "ParliamentBusinessWebsite.UI/ParliamentBusinessWebsite.UI.csproj"
+COPY *.csproj ./
+RUN dotnet restore
 COPY . .
 WORKDIR "/src/ParliamentBusinessWebsite.UI"
 RUN dotnet build "ParliamentBusinessWebsite.UI.csproj" -c Release -o /app
