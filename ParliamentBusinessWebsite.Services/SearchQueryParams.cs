@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace ParliamentBusinessWebsite.Services.Calendar
+namespace ParliamentBusinessWebsite.Services
 {
     public class SearchQueryParams
     {
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }   
+        public DateTime? EndDate { get; set; }
+        public int? EventId { get; set; }
     }
 }

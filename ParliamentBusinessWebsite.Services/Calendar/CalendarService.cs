@@ -41,8 +41,18 @@ namespace ParliamentBusinessWebsite.Services.Calendar
         {
             var query = new StringBuilder($"{CalendarUrl}?");
             query.Append($"queryParameters.startDate={searchParams.StartDate.ToString("yyyy-MM-dd", CultureInfo.CurrentUICulture)}");
-            query.Append($"&queryParameters.endDate={searchParams.EndDate.ToString("yyyy-MM-dd", CultureInfo.CurrentUICulture)}");
+
+            if (searchParams.EndDate.HasValue)
+            {
+                query.Append($"&queryParameters.endDate={searchParams.EndDate.Value.ToString("yyyy-MM-dd", CultureInfo.CurrentUICulture)}");
+            }
+            
             query.Append($"&queryParameters.house=Commons");
+
+            if (searchParams.EventId.HasValue)
+            {
+                query.Append($"&queryParameters.eventId={searchParams.EventId}");
+            }
 
             return query.ToString();
         }

@@ -8,7 +8,8 @@
     function businessService($http, $q) {        
 
         var service = {
-            get: get
+            get: get,
+            getById: getById,
         };
 
         return service;
@@ -25,7 +26,22 @@
             }).then(function (result) {
                  deferred.resolve(result.data);
             }, function (error) {
-                showError(error.status);
+                deferred.reject(error);
+            });
+
+            return deferred.promise;
+        }
+
+        function getById(id) {
+            var url = '/api/business/' + id;
+            var deferred = $q.defer();
+
+            $http({
+                url: url,
+                method: "GET"
+            }).then(function (result) {
+                 deferred.resolve(result.data);
+            }, function (error) {
                 deferred.reject(error);
             });
 

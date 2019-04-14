@@ -20,7 +20,7 @@
 
 
     <div class="card-columns" ng-if="vm.items">
-            <div class="card" ng-repeat="item in vm.items">
+            <div class="card" ng-repeat="item in vm.items" ng-click="vm.openModal(item.id)">
                     <div class="card-body">
                         <h5 class="card-title">
                                 {{item.category}}
@@ -31,11 +31,11 @@
                     </div>
                     <div class="card-footer">
                             <small class="text-muted"> {{item.startDate | date}} {{item.startTime}} {{item.type}} </small>
-                          </div>
+                    </div>
             </div>
     </div>
     <div class="alert alert-info" role="alert" ng-if="vm.items.length <= 0">
         <i class="fa fa-info"></i>
-         There is no house of commons business this week
+         There are no House of Commons business events this week in the main chamber
     </div>
 </div>

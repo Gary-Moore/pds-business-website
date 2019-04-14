@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParliamentBusinessWebsite.Domain", "ParliamentBusinessWebsite.Domain\ParliamentBusinessWebsite.Domain.csproj", "{ED1B78E2-68AE-4831-B3FC-E10EEB59246D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParliamentBusinessWebsite.Domain", "ParliamentBusinessWebsite.Domain\ParliamentBusinessWebsite.Domain.csproj", "{ED1B78E2-68AE-4831-B3FC-E10EEB59246D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParliamentBusinessWebsite.Services", "ParliamentBusinessWebsite.Services\ParliamentBusinessWebsite.Services.csproj", "{04B85241-1708-46E8-BB53-B5BFF90DE647}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParliamentBusinessWebsite.Services", "ParliamentBusinessWebsite.Services\ParliamentBusinessWebsite.Services.csproj", "{04B85241-1708-46E8-BB53-B5BFF90DE647}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParliamentBusinessWebsite.Tests", "ParliamentBusinessWebsite.Tests\ParliamentBusinessWebsite.Tests.csproj", "{A9CA8270-D3C8-4BED-A4C0-C727935558B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParliamentBusinessWebsite.UI", "ParliamentBusinessWebsite.UI\ParliamentBusinessWebsite.UI.csproj", "{110C32F0-02FA-4B78-998A-B896819FCD83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParliamentBusinessWebsite.UI", "ParliamentBusinessWebsite.UI\ParliamentBusinessWebsite.UI.csproj", "{110C32F0-02FA-4B78-998A-B896819FCD83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParliamentBusinessWebsite.Test", "ParliamentBusinessWebsite.Test\ParliamentBusinessWebsite.Test.csproj", "{8AD71486-F9D7-4DF8-BA5F-01EFD47123C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{04B85241-1708-46E8-BB53-B5BFF90DE647}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04B85241-1708-46E8-BB53-B5BFF90DE647}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04B85241-1708-46E8-BB53-B5BFF90DE647}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A9CA8270-D3C8-4BED-A4C0-C727935558B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9CA8270-D3C8-4BED-A4C0-C727935558B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9CA8270-D3C8-4BED-A4C0-C727935558B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9CA8270-D3C8-4BED-A4C0-C727935558B7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{110C32F0-02FA-4B78-998A-B896819FCD83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{110C32F0-02FA-4B78-998A-B896819FCD83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{110C32F0-02FA-4B78-998A-B896819FCD83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{110C32F0-02FA-4B78-998A-B896819FCD83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AD71486-F9D7-4DF8-BA5F-01EFD47123C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD71486-F9D7-4DF8-BA5F-01EFD47123C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD71486-F9D7-4DF8-BA5F-01EFD47123C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD71486-F9D7-4DF8-BA5F-01EFD47123C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

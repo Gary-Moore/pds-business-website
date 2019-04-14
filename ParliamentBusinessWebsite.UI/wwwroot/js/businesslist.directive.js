@@ -21,14 +21,15 @@
         return directive;
     }
 
-    businessListController.$inject = ["$scope", "businessService"];
+    businessListController.$inject = ["$scope", "businessService", "$uibModal"];
 
-    function businessListController($scope, businessService){
+    function businessListController($scope, businessService, $uibModal){
         var vm = this;
         vm.items = [];
         vm.pickerOpen = pickerOpen;
         vm.$onInit = init;
         vm.pickerOpened = false;
+        vm.openModal = openModal;
 
         vm.dateOptions = {
             formatYear: 'yy',
@@ -54,6 +55,26 @@
 
         function pickerOpen(){
             vm.pickerOpened = true;
+        }
+
+        function openModal(id){
+
+            businessService.getById(id).then(function(data){
+               var item = data;
+
+                var modalInstance = $uibModal.open({
+                    component: 'modalComponent',
+                    resolve: {
+                        item: function () {
+                          return item;
+                        }
+                      }
+                });
+    
+                modalInstance.result.then(function () {                    
+                  }, function () {                   
+                  });
+            });            
         }
 
         function disabled(data) {

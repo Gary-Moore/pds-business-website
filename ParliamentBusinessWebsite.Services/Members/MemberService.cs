@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -28,9 +29,12 @@ namespace ParliamentBusinessWebsite.Services.Members
 
             if (response.IsSuccessStatusCode)
             {
-                var serialiser = new XmlSerializer(typeof(Member), new XmlRootAttribute("Members"));
-                var content = await response.Content.ReadAsStreamAsync();
-                return ((IList<Member>)serialiser.Deserialize(content)).FirstOrDefault();
+                var serialiser = new XmlSerializer(typeof(List<Member>), new XmlRootAttribute("Members"));
+                var content = await response.Content.ReadAsStringAsync();
+                using (StringReader stringReader = new StringReader(content))
+                {
+                    return ((List<Member>)serialiser.Deserialize(stringReader)).FirstOrDefault();
+                }
             }
             else
             {

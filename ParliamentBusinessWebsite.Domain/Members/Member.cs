@@ -12,5 +12,8 @@ namespace ParliamentBusinessWebsite.Domain.Members
         public string ListAs { get; set; }
 
         public string FullTitle { get; set; }
+
+        public string Party { get; set; }
+        public string MemberFrom { get; set; }
     }
 }

@@ -21,6 +21,6 @@ namespace ParliamentBusinessWebsite.Domain.Business
         public string Category { get; set; }
         public string Type { get; set; }
 
-        public IEnumerable<Member> Members { get; set; } = new List<Member>();
+        public ICollection<Member> Members { get; set; } = new List<Member>();
     }
 }

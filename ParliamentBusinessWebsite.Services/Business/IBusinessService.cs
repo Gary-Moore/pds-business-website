@@ -8,5 +8,6 @@ namespace ParliamentBusinessWebsite.Services.Business
     public interface IBusinessService
     {
         Task<IList<BusinessItem>> Get(SearchQueryParams searchParams);
+        Task<BusinessItem> GetById(int id);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json.Linq;
 
 namespace ParliamentBusinessWebsite.Domain.Business
 {
@@ -22,5 +23,7 @@ namespace ParliamentBusinessWebsite.Domain.Business
 
         public string Category { get; set; }
         public string Type { get; set; }
+        
+        public List<EventMember> Members { get; set; } = new List<EventMember>();
     }
 }
