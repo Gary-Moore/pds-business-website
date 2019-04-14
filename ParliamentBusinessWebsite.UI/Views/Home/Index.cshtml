@@ -2,4 +2,17 @@
     ViewData["Title"] = "Home Page";
 }
 
+<div ng-app="app.business" class="container-fluid">
+    <business-list></business-list>
+</div>
+
+
+@section Scripts
+{
+        <script src="~/js/angular.js/angular.min.js" asp-append-version="true"></script>
+        <script src="~/js/angular.js/ui-bootstrap-tpls-3.0.6.min.js" asp-append-version="true"></script>
+        <script src="~/js/app.module.js" asp-append-version="true"></script>
+        <script src="~/js/businesslist.directive.js" asp-append-version="true"></script>
+        <script src="~/js/businesslist.service.js" asp-append-version="true"></script>
+}
 

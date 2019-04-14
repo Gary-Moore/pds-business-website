@@ -1,0 +1,41 @@
+<div class="container-fluid">
+
+        <h2>House of Commons - Main Chamber</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Choose a date</h5>
+                <p class="input-group">                    
+                    <input type="text" id="date-picker" class="form-control" uib-datepicker-popup="{{format}}" ng-model="vm.currentDate" 
+                        is-open="vm.pickerOpened" 
+                        datepicker-options="vm.dateOptions" 
+                        close-text="Close"/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-primary" ng-click="vm.pickerOpen()">
+                            <i class="fa fa-calendar"></i>
+                        </button>
+                    </span>
+                </p>
+            </div>
+        </div>
+
+
+    <div class="card-columns" ng-if="vm.items">
+            <div class="card" ng-repeat="item in vm.items">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                                {{item.category}}
+                        </h5>
+                        <p class="card-text">
+                            {{item.description}}
+                        </p>                        
+                    </div>
+                    <div class="card-footer">
+                            <small class="text-muted"> {{item.startDate | date}} {{item.startTime}} {{item.type}} </small>
+                          </div>
+            </div>
+    </div>
+    <div class="alert alert-info" role="alert" ng-if="vm.items.length <= 0">
+        <i class="fa fa-info"></i>
+         There is no house of commons business this week
+    </div>
+</div>

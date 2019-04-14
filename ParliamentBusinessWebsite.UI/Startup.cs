@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ParliamentBusinessWebsite.Services.Business;
+using ParliamentBusinessWebsite.Services.Calendar;
+using ParliamentBusinessWebsite.Services.Members;
 
 namespace ParliamentBusinessWebsite.UI
 {
@@ -30,8 +33,13 @@ namespace ParliamentBusinessWebsite.UI
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddHttpClient();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddTransient<IMemberService, MemberService>();
+            services.AddTransient<IBusinessService, BusinessService>();
+            services.AddTransient<ICalendarService, CalendarService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
