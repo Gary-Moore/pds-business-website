@@ -9,9 +9,6 @@ COPY ["src/ParliamentBusinessWebsite.Domain/ParliamentBusinessWebsite.Domain.csp
 RUN dotnet restore "ParliamentBusinessWebsite.UI/ParliamentBusinessWebsite.UI.csproj"
 COPY . .
 
-
-
-
 FROM build AS publish
 RUN dotnet publish --no-restore -c Release -o /app
 
@@ -19,12 +16,3 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "ParliamentBusinessWebsite.UI.dll"]
-
-#COPY ["ParliamentBusinessWebsite.UI/ParliamentBusinessWebsite.UI.csproj", "ParliamentBusinessWebsite.UI/"]
-#COPY ["ParliamentBusinessWebsite.Domain/ParliamentBusinessWebsite.Domain.csproj", "ParliamentBusinessWebsite.Domain/"]
-#COPY ["ParliamentBusinessWebsite.Tests/ParliamentBusinessWebsite.Tests.csproj", "ParliamentBusinessWebsite.Tests/"]
-#COPY ["ParliamentBusinessWebsite.Services/ParliamentBusinessWebsite.Services.csproj", "ParliamentBusinessWebsite.Services/"]
-#RUN dotnet restore "ParliamentBusinessWebsite.UI/ParliamentBusinessWebsite.UI.csproj"
-#COPY . .
-#WORKDIR "/src/ParliamentBusinessWebsite.UI"
-#RUN dotnet build "ParliamentBusinessWebsite.UI.csproj" -c Release -o /app
